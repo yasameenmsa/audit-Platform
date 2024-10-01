@@ -7,16 +7,15 @@ import listingRouter from './routes/listing.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 dotenv.config();
-
 mongoose
   .connect('mongodb+srv://yasmeenmsa:yasmeenmsa@cluster0.j5vakts.mongodb.net/audit-Platform?retryWrites=true&w=majority')
-    // process.env.MONGO)
   .then(() => {
     console.log('Connected to MongoDB!');
   })
   .catch((err) => {
     console.log(err);
   });
+
 
   const __dirname = path.resolve();
 
